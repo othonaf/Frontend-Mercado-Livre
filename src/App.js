@@ -7,20 +7,19 @@ import Footer from './Footer';
 
 
 function App() {
-  return (
-    
-    <Pai>
-        <div>
-           <Headers/>
-        </div>
-        <div>
-           <Content/>
-        </div>
-        <div>
-           <Footer/>
-        </div>
-    </Pai>
-  );
+   return (
+      <Pai>
+         <div>
+            <Headers />
+         </div>
+         <div>
+            <Content />
+         </div>
+         <div>
+            <Footer />
+         </div>
+      </Pai>
+   );
 }
 
 export default App;
