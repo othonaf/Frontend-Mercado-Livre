@@ -49,7 +49,7 @@ function Content() {
         return;
       }
 
-      const response = await axios.post("https://api-mercado-livre.onrender.com/", { qtde: qtdeNumber, valor: valorNumber });
+      const response = await axios.post("https://api-mercado-livre.onrender.com/calculadora", { qtde: qtdeNumber, valor: valorNumber });
       setResultado(response.data);
     } catch (error) {
       setResultado("Erro ao calcular: " + error.message);
