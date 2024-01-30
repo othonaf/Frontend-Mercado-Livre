@@ -27,13 +27,14 @@ const Container = styled(RSContainer)`
   color: #ffffff;
 `;
 
-
 function Content() {
   const [qtde, setQtde] = useState(0);
   const [valor, setValor] = useState(0);
   const [resultado, setResultado] = useState("");
 
+
   const calcular = async () => {
+
     try {
       // Converter os valores para números usando parseInt ou parseFloat
       const qtdeNumber = parseInt(qtde, 10); // Para números inteiros
@@ -83,8 +84,8 @@ function Content() {
             onChange={(e) => setQtde(e.target.value)}
           />
         </FormGroup>
-        <StyledButton onClick={calcular}>Calcular</StyledButton>
       </Form>
+      <StyledButton onClick={calcular}>Calcular</StyledButton>
       <Row>
         <Col>
           <StyledResultado>
