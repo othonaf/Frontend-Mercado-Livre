@@ -1,31 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import styled from 'styled-components';
-import { Form, FormGroup, Label, Input as RSInput, Container as RSContainer, Row, Col } from 'reactstrap';
+import { Form, FormGroup, Label, Row, Col } from 'reactstrap';
+import { Input, Container, Botao as StyledButton, Resultado as StyledResultado } from './styled';
 
-// Importe os componentes estilizados
-import { Botao as StyledButton, Resultado as StyledResultado } from './styled';
-
-// Crie componentes estilizados para o Input e Container
-const Input = styled(RSInput)`
-  @media (max-width: 768px) {
-    width: 80%;
-    padding: 10px;
-    margin: 5px 0;
-  }
-`;
-
-const Container = styled(RSContainer)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-  text-align: center;
-  background-color: #1282b3;
-  font-family: "Proxima Nova",-apple-system,Roboto,Arial,sans-serif,sans-serif;
-  color: #ffffff;
-`;
 
 function Content() {
   const [qtde, setQtde] = useState(0);
@@ -50,7 +27,7 @@ function Content() {
         return;
       }
 
-      const response = await axios.post("https://api-mercado-livre.onrender.com/calculadora", { qtde: qtdeNumber, valor: valorNumber });
+      const response = await axios.post("https://api-mercado-livre-eight.vercel.app/calculadora", { qtde: qtdeNumber, valor: valorNumber });
       setResultado(response.data);
     } catch (error) {
       setResultado("Erro ao calcular: " + error.message);

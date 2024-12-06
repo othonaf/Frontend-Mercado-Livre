@@ -1,4 +1,25 @@
 import styled from 'styled-components';
+import {Input as RSInput, Container as RSContainer } from 'reactstrap';
+
+export const Input = styled(RSInput)`
+  @media (max-width: 768px) {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+  }
+`;
+
+export const Container = styled(RSContainer)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+  background-color: #1282b3;
+  font-family: "Proxima Nova",-apple-system,Roboto,Arial,sans-serif,sans-serif;
+  color: #ffffff;
+`;
 
 
 export const Header = styled.div`
@@ -71,10 +92,4 @@ export const Footers = styled.footer`
   text-align: center;
 `;
 
-export const Input = styled.input`
-  @media (max-width: 768px) {
-    width: 80%;
-    padding: 10px;
-    margin: 5px 0;
-  }
-`;
+
